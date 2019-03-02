@@ -1,0 +1,98 @@
+.example-container {
+    width: 300px;
+    height: 85%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  
+  .example-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  
+.image
+{
+ width:20%;
+ height:400px;
+ float: left;
+ margin-right:20px;
+ margin-left:60px;  
+ margin-top:190px;
+}
+  
+  .example-sidenav {
+    padding: 20px;
+  }
+  #image
+  {
+      width: 100px;
+      height:100px;
+  }
+  div.layout {
+    text-align: center;
+    margin-top:150px;
+    border-style:"solid";
+    border-color:"grey";
+  }
+  div.centre {
+    text-align: left;
+    width: 600px;;
+    background-color: #eee;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:50px;
+  
+    
+
+  }
+.button1
+{
+  width:45%;
+  margin-right:5%;
+ 
+}
+.button2
+{
+  width:50%;
+
+  
+}
+.example {
+  display: flex;
+  flex-direction: column;
+ 
+}
+.input
+{
+  margin-top:10px;
+}
+
+div.centreb{
+  text-align: left;
+  width: 500px;;
+  background-color: #eee;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:100px;
+
+  
+
+}
+.example > * {
+  width: 92%;
+  margin-left:20px;
+}
+.button{
+  width:10%;
+  margin-left: auto;
+    margin-right: auto;
+    margin-top:60px;
+}
+.button-div
+{
+  text-align: center;
+}
