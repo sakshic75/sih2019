@@ -34,7 +34,7 @@ export class DashboardComponent implements OnInit {
   p: number = 1;
   public env=env;
   dataSource = ELEMENT_DATA;
-  columnsToDisplay = ['name', 'weight', 'symbol', 'position'];
+  columnsToDisplay = ['crops', 'yield_capacity', 'demand', 'earning'];
   expandedElement: PeriodicElement | null;
 
   constructor(private todoService: TodoService,private http:HttpClient){}

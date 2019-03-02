@@ -25,80 +25,51 @@
 
               </div>
           </mat-drawer>
-          <mat-drawer-content id="content">
-          <div>
-            <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8">
-       <ng-container matColumnDef="{{column}}" *ngFor="let column of columnsToDisplay">
-         <mat-header-cell *matHeaderCellDef> {{column}}</mat-header-cell>
-         <mat-cell *matCellDef="let element"> {{element[column]}}</mat-cell>       </ng-container>
-     
-       <!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns -->
-       <ng-container matColumnDef="expandedDetail">
-         <mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplay.length">
-           <div class="example-element-detail"
-                [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
-             <div class="example-element-diagram">
-               <div class="example-element-position"> {{element.position}} </div>
-               <div class="example-element-symbol"> {{element.symbol}} </div>
-               <div class="example-element-name"> {{element.name}} </div>
-               <div class="example-element-weight"> {{element.weight}} </div>
-             </div>
-             <div class="example-element-description">
-               {{element.description}}
-               <span class="example-element-description-attribution"> -- Wikipedia </span>
-             </div>
-           </div>
-          </mat-cell>
-       </ng-container>
-     
-       <mat-header-row *matHeaderRowDef="columnsToDisplay"></mat-header-row>
-       <mat-row *matRowDef="let element; columns: columnsToDisplay;"
-           class="example-element-row"
-           [class.example-expanded-row]="expandedElement === element"
-           (click)="expandedElement = expandedElement === element ? null : element">
-       </mat-row>
-       <mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></mat-row>
-     </table>
-                <!-- <nz-table class="table" #basicTable >
-                    <thead>
-                <tr>
-                    <th>Crop</th>
-                    <th>Yield_Capacity</th>
-                    <th>Demand</th>
-                    <th>Earning</th>
-                    <th>Link</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <ng-container *ngIf="todos$ | async as todos">
-                       
-                            <tr *ngFor="let todo of todos | paginate: { itemsPerPage: 10, currentPage: p }">
-                              <td>{{todo.crop}}</td>
-                              <td>{{todo.yield_capacity}}</td>
-                              <td>{{todo.demand}}</td>
-                              <td>{{todo.earning}}</td>
-                              <td><a href="{{todo.link}}">link</a></td>
-                            </tr>
-                        
-                         <nz-pagination [nzPageIndex]="1" [nzTotal]="50" (nzPageIndexChange)="p =$event"></nz-pagination> 
-                     
-                
-                         </ng-container>
-                          </tbody>
-                
+          <mat-drawer-content>
+              
+            <nz-table class="table" #basicTable >
+                <thead>
+            <tr>
+                <th>Crop</th>
+                <th>Yield_Capacity</th>
+                <th>Demand</th>
+                <th>Earning</th>
+                <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <ng-container *ngIf="todos$ | async as todos">
                    
+                        <tr *ngFor="let todo of todos | paginate: { itemsPerPage: 10, currentPage: p }">
+                          <td>{{todo.crop}}</td>
+                          <td>{{todo.yield_capacity}}</td>
+                          <td>{{todo.demand}}</td>
+                          <td>{{todo.earning}}</td>
+                          <td><a href="{{todo.link}}">link</a></td>
+                        </tr>
                     
+                     <nz-pagination [nzPageIndex]="1" [nzTotal]="50" (nzPageIndexChange)="p =$event"></nz-pagination> 
+                 
+            
+                     </ng-container>
+                      </tbody>
+            
+               
                 
-                        </nz-table> -->
+            
+                    </nz-table>
 
-                        </div>
-                        <button class="button"mat-raised-button color="primary" type="button" style="width:10%;text-align: center" routerLink="/layout">Reload
+                  
+          
+
+    
+       <button class="button"mat-raised-button color="primary" type="button" style="width:10%;text-align: center" routerLink="/layout">Reload
                             </button>
                        </mat-drawer-content>
       
-      </mat-drawer-container>
+      </mat-drawer-container> 
  
     
     
-    <router-outlet></router-outlet>
+    <router-outlet></router-outlet> 
     
