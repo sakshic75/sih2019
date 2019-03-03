@@ -3,5 +3,18 @@
     {
         "target":"http://localhost:4000",
         "secure":false
+    },
+    "/route/enaam":
+    {
+        "target":"http://localhost:4000",
+        "secure":false
+    },
+
+    "/getFarmer?id=12345":
+    {
+        "target":"http://10.148.8.107:1997",
+        "secure":false,
+        "changeOrigin": true
     }
+
 }

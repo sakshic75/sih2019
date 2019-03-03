@@ -1,10 +1,10 @@
 export class Todo
 {
 
-    crop:string;
-    yield_capacity:string;
-    demand:string;
-    earning:string;
+    crops:string;
+    yield:string;
+   demand:string;
+    estimated_price:string;
     
     //  id:number;
     // title:string;

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { environment as env } from '../../environments/environment';
 
 import {TodoService} from "../todo.service";
-import {Farmer} from "src/Farmer";
+import {Todo} from "../Todo";
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import {NgxPaginationModule} from "ngx-pagination";
@@ -14,13 +14,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
-import {MatCardModule} from '@angular/material/card';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css'],
+  selector: 'app-enaam',
+  templateUrl: './enaam.component.html',
+  styleUrls: ['./enaam.component.css'],
   animations: [
     trigger('detailExpand', [
       state('collapsed', style({height: '0px', minHeight: '0', display: 'none'})),
@@ -29,10 +28,9 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
     ]),
   ],
 })
-export class DashboardComponent implements OnInit {
+export class EnaamComponent implements OnInit {
   title = 'fire';
-  data:Farmer;
-  farmers$:Observable<any>;
+  todos$:Observable<any>;
   p: number = 1;
   public env=env;
   dataSource = ELEMENT_DATA;
@@ -58,15 +56,11 @@ export class DashboardComponent implements OnInit {
     //    this.todo=data;
     //   }
     // );
-    this.farmers$=this.todoService.getFarmerDetails();
-    this.farmers$.subscribe(res=>
-      {
-      this.data=res;
-      }
-      );
+    this.todos$=this.todoService.getEnaamDetails();
+    console.log(this.todos$);
 
 
-console.log(this.data);
+
     
   }
 

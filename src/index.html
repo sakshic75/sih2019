@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>Fire</title>
   <base href="/">
-
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="https://cdn.firebase.com/libs/firepad/1.4.0/firepad.css" />
@@ -16,11 +16,42 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/mode/javascript/javascript.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+  body{background-image: url("assets/bg.jpeg");
+background-repeat: no-repeat;
+background-size: cover;
+}
+</style>
 </head>
+<script type="text/javascript">
+
+function Warn(){
+  var ask = window.confirm("Demand is low..You still want to lock?");
+    if (ask) {
+        window.alert("This is locked.");
+
+        window.location.href = "/enaam";
+
+    };
+  
+}
+
+function noWarn(){
+  var ask = window.confirm("This is Locked");
+    if (ask) {
+        window.alert("Redirecting you to enaam.gov.in");
+
+        window.location.href = "/enaam";
+
+    };
+  
+}
+  </script>
+
 <body>
  
   <app-root></app-root>
-  
+  <img class="vasant" src="assets/vasant.jpg" width="400px">
 
  
 

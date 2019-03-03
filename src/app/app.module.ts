@@ -24,12 +24,16 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
 
 
+
 import {LayoutComponent} from "./layout/layout.component";
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 
 import {MatFormFieldModule, MatFormField} from '@angular/material/form-field';
 import {MatCheckboxModule,MatInputModule,MatProgressSpinnerModule,MatCardModule,MatMenuModule, MatIconModule} from '@angular/material';
+import { RecommendationComponent } from './recommendation/recommendation.component';
+import { MainComponent } from './main/main.component';
+import { EnaamComponent } from './enaam/enaam.component';
 
 
 
@@ -50,6 +54,9 @@ registerLocaleData(en);
     LayoutComponent,
     HeaderComponent,
     FooterComponent,
+    RecommendationComponent,
+    MainComponent,
+    EnaamComponent,
    
   
   
@@ -62,6 +69,7 @@ registerLocaleData(en);
     HttpClientModule,
     NgZorroAntdModule,
     ReactiveFormsModule ,
+    MatCardModule,
   FormsModule,
   MatTableModule,
     BrowserAnimationsModule,
